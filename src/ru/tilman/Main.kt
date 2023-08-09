@@ -1,6 +1,6 @@
 package ru.tilman
 
-import ru.tilman.a02happytickets.CountHappyTickets
+import ru.tilman.a01happytickets.CountHappyTickets
 import ru.tilman.checktasks.Tester
 
 

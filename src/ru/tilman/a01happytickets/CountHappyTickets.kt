@@ -1,4 +1,4 @@
-package ru.tilman.a02happytickets
+package ru.tilman.a01happytickets
 
 import ru.tilman.checktasks.Task
 
