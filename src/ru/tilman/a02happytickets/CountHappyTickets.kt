@@ -1,4 +1,4 @@
-package ru.tilman.a01happytickets
+package ru.tilman.a02happytickets
 
 import ru.tilman.checktasks.Task
 
@@ -46,6 +46,5 @@ class CountHappyTickets : Task {
         if (isDebug) println(data.joinToString("\t\t", "SQR:\t") { (it * it).toString() })
         return result
     }
-
 
 }

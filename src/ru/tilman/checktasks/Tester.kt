@@ -19,7 +19,6 @@ class Tester(
     fun runTests() {
         var counter = 0
 
-
         while (true) {
             val inFile = Path("${path}test.${counter}.in")
             val outFile = Path("${path}test.${counter}.out")
