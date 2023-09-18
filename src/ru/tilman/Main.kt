@@ -1,12 +1,12 @@
 package ru.tilman
 
 import ru.tilman.a01happytickets.CountHappyTickets
-import ru.tilman.a06simplesort.SimpleSortTask
+import ru.tilman.a06simplesort.SortTask
 import ru.tilman.checktasks.Tester
 
 
 fun main(args: Array<String>) {
-    SimpleSortTask().run(emptyArray(), false)
+    SortTask().run(emptyArray(), false)
 
     val countHappyTickets = CountHappyTickets()
     if (args.isEmpty()) return
