@@ -1,5 +1,6 @@
 package ru.tilman.a06simplesort
 
+import ru.tilman.a07pyrmidalsort.SelectionSort
 import ru.tilman.a09linesort.BucketSort
 import ru.tilman.checktasks.Task
 import java.text.DecimalFormat
@@ -20,14 +21,8 @@ class SortTask : Task {
             val decimalFormat = DecimalFormat("###,###")
             println("Размер: '${decimalFormat.format(i)}', сравнений: '???', присвоений: '???', время исполнения: '${decimalFormat.format(internalSortTimeMills)} мс'.")
 
-            val actual = executeSort(BucketSort(arr.copyOf()))
-            if (isDebug && arr.size <= 100 && !actual.assert(expected)) {
-                println()
-                println(arr.joinToString())
-                println(expected.joinToString())
-                println(actual.array.joinToString())
-            }
 
+            executeSortAndCheck(SelectionSort(arr.copyOf()), expected)
             executeSortAndCheck(BucketSort(arr.copyOf()), expected)
             executeSortAndCheck(BubleSort(arr.copyOf()), expected)
             executeSortAndCheck(InsertionSort(arr.copyOf()), expected)
