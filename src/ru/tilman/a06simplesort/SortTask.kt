@@ -2,6 +2,7 @@ package ru.tilman.a06simplesort
 
 import ru.tilman.a07pyrmidalsort.SelectionSort
 import ru.tilman.a09linesort.BucketSort
+import ru.tilman.a07pyrmidalsort.HeapSort
 import ru.tilman.checktasks.Task
 import java.text.DecimalFormat
 import kotlin.system.measureTimeMillis
@@ -22,6 +23,7 @@ class SortTask : Task {
             println("Размер: '${decimalFormat.format(i)}', сравнений: '???', присвоений: '???', время исполнения: '${decimalFormat.format(internalSortTimeMills)} мс'.")
 
 
+            executeSortAndCheck(HeapSort(arr.copyOf()), expected)
             executeSortAndCheck(SelectionSort(arr.copyOf()), expected)
             executeSortAndCheck(BucketSort(arr.copyOf()), expected)
             executeSortAndCheck(BubleSort(arr.copyOf()), expected)
