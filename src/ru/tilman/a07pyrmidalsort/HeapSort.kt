@@ -15,12 +15,13 @@ class HeapSort<T : Comparable<T>>(override val array: Array<T>) : AbstractSort<T
         }
 
     }
+
     private fun heapify(root: Int, size: Int) {
         var x = root
         val right = 2 * x + 1
         val left = 2 * x + 2
-        if (left < size && array[left] > array[x]) x = left
-        if (right < size && array[right] > array[x]) x = right
+        if (left < size && compare.incAndGet() > 0 && array[left] > array[x]) x = left
+        if (right < size && compare.incAndGet() > 0 && array[right] > array[x]) x = right
         if (x == root) return
         swap(root, x)
         heapify(x, size)

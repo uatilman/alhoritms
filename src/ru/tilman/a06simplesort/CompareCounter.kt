@@ -8,6 +8,9 @@ class CompareCounter : Number() {
     }
 
     fun get() = compare[0]
+
+    fun incAndGet():Int = inc().get()
+
     fun reset() {
         compare[0] = 0
     }
